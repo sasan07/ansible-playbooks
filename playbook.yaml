@@ -1,0 +1,30 @@
+---
+- name: Install Apache2
+  hosts: apache
+  become: true
+  tasks:
+    - name: Install apache2
+      apt:
+        name: apache2
+        state: present
+        update_cache: true
+    - name: Start apache2
+      service:
+        name: apache2
+        state: started
+        enabled: true
+
+- name: Install Nginx
+  hosts: nginx
+  become: true
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: true
+    - name: Start nginx
+      service:
+        name: nginx
+        state: started
+        enabled: true
