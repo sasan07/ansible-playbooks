@@ -1,0 +1,17 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Terraform variable files - may contain credentials
+*.tfvars
+*.tfvars.json
+
+# Sensitive/private keys
+*.pem
+*.key
+
+# OS files
+.DS_Store
+Thumbs.db
